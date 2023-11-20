@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <title>Document</title>
+</head>
+
+<body onload="Read()">
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <header id="crud">
+        <h1 id="crud">Avaliação 3</h1>
+    </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a onclick="menu('home')" href="#">Home</a></li>
+                <li><a onclick="menu('sobre')" href="#">Sobre</a></li>
+                <li><a onclick="menu('formulario')" href="#">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main id="conteudo">
+        <section class="larger">
+            <h2 id="formulario">Login</h2>
+            <form>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome"><br>
+                <br>
+                <input type="text" id="email" name="email" placeholder="Seu email"><br>
+                <br>
+                <input type="date" id="data" name="data"><br>
+                <br>
+                <input type="text" id="senha" name="senha" placeholder="Sua senha">
+                <br><br>
+                <input type="hidden" id="id">
+                <button id="salvar" onclick="Save()">Salvar</button>
+            </form>
+        </section>
+        <section>
+            <h2 id="formulario">Tabela de Usuarios</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Data</th>
+                        <th>Senha</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela">
+                </tbody>
+            </table>
+        </section>
+        <script src='main.js'></script>
+    </main>
+
+</body>
+
+</html>
