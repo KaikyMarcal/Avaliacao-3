@@ -145,5 +145,5 @@ function irParaIndex() {
 
 function irParaIndex() {
     // Redireciona para a index.html
-    window.location.href = 'http://127.0.0.1:5500/AVALIAÇÃO-3/index.html';
+    window.location.href = 'https://kaikymarcal.github.io/Avaliacao-3/';
 }
